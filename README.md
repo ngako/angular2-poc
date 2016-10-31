@@ -22,3 +22,12 @@ The finality is to have a simple web calaculator whish permit the addition, mult
 
 
 ## FAQ
+1) TypeScript - How to keep compiled files in a separate directory?
+
+Set your TypeScript configuration file andt add:
+
+```json
+"compilerOptions": {
+    "outDir": "DIRECTORY"
+    ...
+```
