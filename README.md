@@ -8,6 +8,8 @@ A POC to learn how we can use the new major version of [AngularJS](https://angul
 * [FAQs](#faqs)
 
 ## Goal
+
+Build , run and testing a simple Angular application.
 Create and test an aplication based on angular2.
 
 ## Know Issues
