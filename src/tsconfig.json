@@ -12,12 +12,12 @@
     "typeRoots": [
       "./node_modules/@types/"
     ],
-    "outDir": "dist"
+    "outDir": "build"
   },
   "compileOnSave": true,
   "exclude": [
     "node_modules/*",
     "**/*-aot.ts",
-    "dist/*"
+    "build/*"
   ]
 }
