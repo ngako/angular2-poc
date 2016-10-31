@@ -9,8 +9,8 @@ A POC to learn how we can use the new major version of [AngularJS](https://angul
 
 ## Goal
 
-Build , run and testing a simple Angular application.
-Create and test an aplication based on angular2.
+Build , run and testing a simple Angular application. 
+The application is a simple calculator whish permit the addition, multiplication and the soustration.
 
 ## Know Issues
 
