@@ -15,4 +15,4 @@ The application is a simple calculator whish permit the addition, multiplication
 ## Know Issues
 
 
-## FAQs
+## FAQ
