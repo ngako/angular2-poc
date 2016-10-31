@@ -7,7 +7,7 @@ Error.stackTraceLimit = 0; // "No stacktrace"" is usually best for app testing.
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 1000;
 
-var builtPath = '/base/app/';
+var builtPath = '/base/build/app/';
 
 __karma__.loaded = function () { };
 
@@ -20,6 +20,7 @@ function isSpecFile(path) {
 }
 
 function isBuiltFile(path) {
+  console.log(path);
   return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
 }
 
