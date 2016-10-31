@@ -15,7 +15,7 @@ The application is based on Angular [QuickStart](https://github.com/angular/quic
 
 The angular QuickStart application doesn't discuss testing. The major part of this POC is thus focused on the test.
 
-The finality is to have a simple web calaculator whish permit the addition, multiplication and the solution.
+The finality is to have a simple web calaculator whish permit the addition, multiplication and the subtraction.
 
 
 ## Know Issues
