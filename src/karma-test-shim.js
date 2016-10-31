@@ -20,7 +20,6 @@ function isSpecFile(path) {
 }
 
 function isBuiltFile(path) {
-  console.log(path);
   return isJsFile(path) && (path.substr(0, builtPath.length) == builtPath);
 }
 
