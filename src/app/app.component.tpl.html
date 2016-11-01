@@ -8,7 +8,7 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>Select operation
-                                <select (value)="operation">
+                                <select [value]="operation">
                                     <option value="+">Addition</option>
                                     <option value="x">Multiplication</option>
                                     <option value="-">Substraction</option>
@@ -19,21 +19,21 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>First value
-                                <input type="number" placeholder="First value" [(value)]="fstvalue">
+                                <input type="number" placeholder="First value" [value]="fstvalue">
                             </label>
 						</div>
 						<div class="medium-6 columns end">
 							<label>Second value
-                                <input type="number" placeholder="second value" [(value)]="scdvalue">
+                                <input type="number" placeholder="second value" [value]="scdvalue">
                             </label>
 						</div>
 					</div>
-					<div class="row">
-						<div class="medium-12 columns">
-							<button class="button expanded">Process</button>
-						</div>
-					</div>
 				</form>
+				<div class="row">
+					<div class="medium-12 columns">
+						<button class="button expanded" (click)="processOperation(operation,fstvalue,scdvalue)">Process</button>
+					</div>
+				</div>
 			</div>
 
 		</div>
@@ -47,7 +47,7 @@
 		<div class="tabs-content" data-tabs-content="calculator-result">
 			<div class="tabs-panel is-active" id="panel1">
 				<ul>
-					<li *ngIf="fstvalue + sdcvalue">
+					<li>
 						<span>{{fstvalue}}</span>
 						<span>{{operation}}</span>
 						<span>{{sdcvalue}}</span>

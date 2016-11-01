@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     operation: string = 'x';
-    fstvalue: number = 0;
+    fstvalue: number = 1;
     scdvalue: number = 0;
     result: number = 0;
     listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
@@ -15,8 +15,9 @@ export class AppComponent {
         this.result = this.multiplication(this.fstvalue,this.scdvalue);
     }
 
-    process(operation: string, firstvalue: number, scdvalue: number): void {
-
+    processOperation(operation: string, firstvalue: number, scdvalue: number): void {
+        console.log(operation);
+        console.log(firstvalue);
     }
 
     addition(firstvalue: number, scdvalue: number): number {
