@@ -5,26 +5,26 @@ import { Component } from '@angular/core';
     templateUrl: "/app/app.component.tpl.html"
 })
 export class AppComponent {
-    operation: string = '';
-    fstvalue: number = 1;
+    operation: number = 0;
+    fstvalue: number = 0;
     scdvalue: number = 0;
     result: number = 0;
     listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
-    listOperator: Array<{ value: string, text: string }>;
+    listOperator: Array<{ value: number, text: string }>;
 
     constructor() {
         this.result = this.multiplication(this.fstvalue, this.scdvalue);
         this.listOperator = [
             {
-                value: 'x',
+                value: 1,
                 text: 'Multiplication'
             },
                         {
-                value: '+',
+                value: 2,
                 text: 'Addition'
             },
                         {
-                value: '-',
+                value: 3,
                 text: 'Substraction'
             }
         ]
@@ -48,5 +48,17 @@ export class AppComponent {
     substration(firstvalue: number, scdvalue: number): number {
         let result: number;
         return result;
+    }
+
+    setFirstValue(value:number): void{
+        this.fstvalue = value;
+    }
+
+    setSecondValue(value: number):void{
+        this.scdvalue = value;
+    }
+
+    setOperation(value: number):void{
+        this.operation = value;
     }
 }

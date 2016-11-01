@@ -8,7 +8,7 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>Select operation
-                                <select bind-value="operation">
+                                <select bind-value="operation" on-change="setOperation($event.target.value)">
 									<option value=""></option>
                                     <option *ngFor="let op of listOperator" value="op.value">{{op.text}}</option>
                                 </select>
@@ -18,19 +18,21 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>First value
-                                <input type="number" placeholder="First value" bindon-value="fstvalue">
+                                <input type="number" placeholder="First value" bind-value="fstvalue" 
+								on-input="setFirstValue($event.target.value)">
                             </label>
 						</div>
 						<div class="medium-6 columns end">
 							<label>Second value
-                                <input type="number" placeholder="second value" bindon-value="scdvalue">
+                                <input type="number" placeholder="second value" bind-value="scdvalue"
+								on-input="setSecondValue($event.target.value)">
                             </label>
 						</div>
 					</div>
 				</form>
 				<div class="row">
 					<div class="medium-12 columns">
-						<button class="primary button expanded" on-click="processOperation()">Process</button>
+						<button class="primary button expanded" on-click="processOperation()" [disabled]="!operation">Process</button>
 					</div>
 				</div>
 			</div>
@@ -49,7 +51,7 @@
 					<li>
 						<span>{{fstvalue}}</span>
 						<span>{{operation}}</span>
-						<span>{{sdcvalue}}</span>
+						<span>{{scdvalue}}</span>
 						<span>= {{result}}</span>
 					</li>
 				</ul>
