@@ -8,10 +8,10 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>Select operation
-                                <select name="op">
-                                    <option value="1">Addition</option>
-                                    <option value="2">Multiplication</option>
-                                    <option value="3">Substraction</option>
+                                <select (value)="operation">
+                                    <option value="+">Addition</option>
+                                    <option value="x">Multiplication</option>
+                                    <option value="-">Substraction</option>
                                 </select>
                            </label>
 						</div>
@@ -19,12 +19,12 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>First value
-        <input type="number" placeholder="First value" name="fstvalue">
+                                <input type="number" placeholder="First value" [(value)]="fstvalue">
                             </label>
 						</div>
 						<div class="medium-6 columns end">
 							<label>Second value
-                                <input type="number" placeholder="second value" name="scdvalue">
+                                <input type="number" placeholder="second value" [(value)]="scdvalue">
                             </label>
 						</div>
 					</div>
@@ -40,20 +40,26 @@
 	</div>
 	<div class="large-5 columns">
 		<h4>Results of your operations</h4>
-		<ul class="tabs" data-tabs id="example-tabs">
+		<ul class="tabs" data-tabs id="calculator-result">
 			<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Current result</a></li>
 			<li class="tabs-title"><a href="#panel2">Preceding operations</a></li>
 		</ul>
-		<div class="tabs-content" data-tabs-content="example-tabs">
+		<div class="tabs-content" data-tabs-content="calculator-result">
 			<div class="tabs-panel is-active" id="panel1">
-				<p>
+				<ul>
+					<li *ngIf="fstvalue + sdcvalue">
+						<span>{{fstvalue}}</span>
+						<span>{{operation}}</span>
+						<span>{{sdcvalue}}</span>
+						<span>= {{result}}</span>
+					</li>
+				</ul>
 
-                </p>
 			</div>
 			<div class="tabs-panel" id="panel2">
 				<p>
 
-                </p>
+				</p>
 			</div>
 		</div>
 	</div>
