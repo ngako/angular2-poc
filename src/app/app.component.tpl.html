@@ -1,1 +1,60 @@
-<h1>Simple Web calculator</h1>
+<div class="row">
+	<div class="large-5 columns">
+		<h1>Web calculator</h1>
+		<hr/>
+		<div class="row">
+			<div class="large-12 columns">
+				<form>
+					<div class="row">
+						<div class="medium-6 columns">
+							<label>Select operation
+                                <select name="op">
+                                    <option value="1">Addition</option>
+                                    <option value="2">Multiplication</option>
+                                    <option value="3">Substraction</option>
+                                </select>
+                           </label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-6 columns">
+							<label>First value
+        <input type="number" placeholder="First value" name="fstvalue">
+                            </label>
+						</div>
+						<div class="medium-6 columns end">
+							<label>Second value
+                                <input type="number" placeholder="second value" name="scdvalue">
+                            </label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="medium-12 columns">
+							<button class="button expanded">Process</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<div class="large-5 columns">
+		<h4>Results of your operations</h4>
+		<ul class="tabs" data-tabs id="example-tabs">
+			<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Current result</a></li>
+			<li class="tabs-title"><a href="#panel2">Preceding operations</a></li>
+		</ul>
+		<div class="tabs-content" data-tabs-content="example-tabs">
+			<div class="tabs-panel is-active" id="panel1">
+				<p>
+
+                </p>
+			</div>
+			<div class="tabs-panel" id="panel2">
+				<p>
+
+                </p>
+			</div>
+		</div>
+	</div>
+</div>
