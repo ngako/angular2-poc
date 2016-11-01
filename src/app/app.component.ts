@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: "/app/app.component.tpl.html"
 })
 export class AppComponent {
-    operation: string = 'x';
+    operation: string = '';
     fstvalue: number = 1;
     scdvalue: number = 0;
     result: number = 0;

@@ -9,9 +9,8 @@
 						<div class="medium-6 columns">
 							<label>Select operation
                                 <select [value]="operation">
-                                    <option value="+">Addition</option>
-                                    <option value="x">Multiplication</option>
-                                    <option value="-">Substraction</option>
+									<option value=""></option>
+                                    <option *ngFor="let op of listOperator" value="op.value">{{op.text}}</option>
                                 </select>
                            </label>
 						</div>
