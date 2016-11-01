@@ -5,25 +5,32 @@ import { Component } from '@angular/core';
     templateUrl: "/app/app.component.tpl.html"
 })
 export class AppComponent {
-    operation:string;
-    firstvalue:number = 0;
-    scdvalue:number = 0;
-    result:number = 0;
-    listOperation: Array<{firstvalue:number,scdvalue:number,operation:string}>;
+    operation: string = 'x';
+    fstvalue: number = 0;
+    scdvalue: number = 0;
+    result: number = 0;
+    listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
 
-    process(operation:string, firstvalue:number, scdvalue:number):void{
+    constructor() {
+        this.result = this.multiplication(this.fstvalue,this.scdvalue);
+    }
+
+    process(operation: string, firstvalue: number, scdvalue: number): void {
 
     }
 
-    addition():void{
-
+    addition(firstvalue: number, scdvalue: number): number {
+        let result:number;
+        return result;
     }
 
-    multiplication(): void{
-
+    multiplication(firstvalue: number, scdvalue: number): number {
+        let result:number;
+        return result;
     }
 
-    substration(): void{
-
+    substration(firstvalue: number, scdvalue: number): number {
+        let result:number;
+        return result;
     }
- }
+}
