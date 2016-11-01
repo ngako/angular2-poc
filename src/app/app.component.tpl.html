@@ -18,19 +18,19 @@
 					<div class="row">
 						<div class="medium-6 columns">
 							<label>First value
-                                <input type="number" placeholder="First value" bind-value="fstvalue">
+                                <input type="number" placeholder="First value" bindon-value="fstvalue">
                             </label>
 						</div>
 						<div class="medium-6 columns end">
 							<label>Second value
-                                <input type="number" placeholder="second value" bind-value="scdvalue">
+                                <input type="number" placeholder="second value" bindon-value="scdvalue">
                             </label>
 						</div>
 					</div>
 				</form>
 				<div class="row">
 					<div class="medium-12 columns">
-						<button class="primary button expanded" (click)="processOperation(operation,fstvalue,scdvalue)" disabled>Process</button>
+						<button class="primary button expanded" on-click="processOperation()">Process</button>
 					</div>
 				</div>
 			</div>

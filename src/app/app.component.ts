@@ -30,9 +30,9 @@ export class AppComponent {
         ]
     }
 
-    processOperation(operation: string, firstvalue: number, scdvalue: number): void {
-        console.log(operation);
-        console.log(firstvalue);
+    processOperation(): void {
+        console.log(this.operation);
+        console.log(this.fstvalue);
     }
 
     addition(firstvalue: number, scdvalue: number): number {
