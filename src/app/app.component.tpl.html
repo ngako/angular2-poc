@@ -40,8 +40,8 @@
 	<div class="large-5 columns">
 		<h4>Results of your operations</h4>
 		<ul class="tabs" data-tabs id="calculator-result">
-			<li class="tabs-title" (click)="activePan=1"><a href="#panel1" aria-selected="true">Current result</a></li>
-			<li class="tabs-title" (click)="activePan=2"><a href="#panel2">Preceding operations</a></li>
+			<li class="tabs-title" (click)="activePan=1"><a href="#panel1" [attr.aria-selected]="activePan==1">Current result</a></li>
+			<li class="tabs-title" (click)="activePan=2"><a href="#panel2" [attr.aria-selected]="activePan==2">Preceding operations</a></li>
 		</ul>
 		<div class="tabs-content" data-tabs-content="calculator-result">
 			<div class="tabs-panel is-active" id="panel1" [class.is-active]="activePan==1">
