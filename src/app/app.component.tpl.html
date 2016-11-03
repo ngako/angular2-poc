@@ -43,7 +43,7 @@
 			<li class="tabs-title" (click)="activePan=1"><a href="#panel1" aria-selected="true">Current result</a></li>
 			<li class="tabs-title" (click)="activePan=2"><a href="#panel2">Preceding operations</a></li>
 		</ul>
-		<div class="tabs-content" data-tabs-content="calculator-result" *ngIf="activePan==1">
+		<div class="tabs-content" data-tabs-content="calculator-result">
 			<div class="tabs-panel is-active" id="panel1" [class.is-active]="activePan==1">
 				<ul>
 					<li>
@@ -54,17 +54,13 @@
 					</li>
 				</ul>
 			</div>
-			<div class="tabs-panel" id="panel2" *ngIf="activePan==2">
-				<div class="tabs-panel" id="panel1" [class.is-active]="activePan==2">
-					<ul>
-						<li>
-							<span>{{fstvalue}}</span>
-							<span>{{strOperation}}</span>
-							<span>{{scdvalue}}</span>
-							<span>= {{result}}</span>
-						</li>
-					</ul>
-				</div>
+			<div class="tabs-panel" id="panel2" [class.is-active]="activePan==2">
+				<h5>Vos dernières operations</h5>
+				<ul>
+					<li *ngFor="let op of listOperation">
+						{{op.fisrtvalue}} {{op.opration}} {{op.scdvalue}} = {{op.result}}
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

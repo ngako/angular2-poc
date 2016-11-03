@@ -11,7 +11,7 @@ export class AppComponent {
     result: number = 0;
     activePan: number = 1;
     strOperation: string = '';
-    listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
+    listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string, result: number }> = [];
     listOperator: Array<{ value: number, text: string }>;
 
     constructor() {
@@ -51,6 +51,13 @@ export class AppComponent {
             default:
                 break;
         }
+
+        this.listOperation.push({
+            firstvalue: this.fstvalue,
+            scdvalue: this.scdvalue,
+            operation: this.strOperation,
+            result: this.result
+        })
     }
 
     addition(): void {
