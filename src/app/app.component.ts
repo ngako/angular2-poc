@@ -9,6 +9,7 @@ export class AppComponent {
     fstvalue: number = 0;
     scdvalue: number = 0;
     result: number = 0;
+    activePan: number = 1;
     strOperation: string = '';
     listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
     listOperator: Array<{ value: number, text: string }>;
