@@ -31,6 +31,7 @@ export class AppComponent {
     }
 
     processOperation(): void {
+        console.log(this.operation);
         switch (this.operation) {
             case 1:
                 this.strOperation = "+";
@@ -48,17 +49,21 @@ export class AppComponent {
             default:
                 break;
         }
+        console.log(this.result);
     }
 
     addition(): void {
+        console.log("addition");
         this.result = this.fstvalue + this.scdvalue;
     }
 
     multiplication(): void {
+        console.log("multiplication");
         this.result = this.fstvalue * this.scdvalue;
     }
 
     substration(): void {
+        console.log("substraction");
         this.result = this.fstvalue - this.scdvalue;
     }
 }
