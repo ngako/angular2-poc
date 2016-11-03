@@ -9,21 +9,21 @@ export class AppComponent {
     fstvalue: number = 0;
     scdvalue: number = 0;
     result: number = 0;
+    strOperation: string = '';
     listOperation: Array<{ firstvalue: number, scdvalue: number, operation: string }>;
     listOperator: Array<{ value: number, text: string }>;
 
     constructor() {
-        this.result = this.multiplication(this.fstvalue, this.scdvalue);
         this.listOperator = [
             {
                 value: 1,
                 text: 'Multiplication'
             },
-                        {
+            {
                 value: 2,
                 text: 'Addition'
             },
-                        {
+            {
                 value: 3,
                 text: 'Substraction'
             }
@@ -31,34 +31,34 @@ export class AppComponent {
     }
 
     processOperation(): void {
-        console.log(this.operation);
-        console.log(this.fstvalue);
+        switch (this.operation) {
+            case 1:
+                this.strOperation = "+";
+                this.addition();
+                break;
+            case 2:
+                this.strOperation = "x";
+                this.multiplication();
+                break;
+            case 3:
+                this.strOperation = "-";
+                this.substration();
+                break;
+
+            default:
+                break;
+        }
     }
 
-    addition(firstvalue: number, scdvalue: number): number {
-        let result: number;
-        return result;
+    addition(): void {
+        this.result = this.fstvalue + this.scdvalue;
     }
 
-    multiplication(firstvalue: number, scdvalue: number): number {
-        let result: number;
-        return result;
+    multiplication(): void {
+        this.result = this.fstvalue * this.scdvalue;
     }
 
-    substration(firstvalue: number, scdvalue: number): number {
-        let result: number;
-        return result;
-    }
-
-    setFirstValue(value:number): void{
-        this.fstvalue = value;
-    }
-
-    setSecondValue(value: number):void{
-        this.scdvalue = value;
-    }
-
-    setOperation(value: number):void{
-        this.operation = value;
+    substration(): void {
+        this.result = this.fstvalue - this.scdvalue;
     }
 }
