@@ -16,11 +16,11 @@ export class AppComponent {
     constructor() {
         this.listOperator = [
             {
-                value: 1,
+                value: 2,
                 text: 'Multiplication'
             },
             {
-                value: 2,
+                value: 1,
                 text: 'Addition'
             },
             {
@@ -31,8 +31,9 @@ export class AppComponent {
     }
 
     processOperation(): void {
-        console.log(this.operation);
-        switch (this.operation) {
+
+        let op = Number(this.operation);
+        switch (op) {
             case 1:
                 this.strOperation = "+";
                 this.addition();
@@ -49,7 +50,6 @@ export class AppComponent {
             default:
                 break;
         }
-        console.log(this.result);
     }
 
     addition(): void {
